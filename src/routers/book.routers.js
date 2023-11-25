@@ -1,8 +1,10 @@
 const { Router } = require("express");
 const router = Router();
-// const userCtrl = require("../controller/user.controller");
+const bookCtrl = require("../controller/book.controller");
 
-// router.post("/register", userCtrl.postUser);
-// router.get("/login", userCtrl.getLogin);
+router.get("/books", bookCtrl.getBook);
+router.post("/books", bookCtrl.postBook);
+router.put("/books", bookCtrl.putBook);
+router.delete("/books", bookCtrl.delBook);
 
 module.exports = router;
